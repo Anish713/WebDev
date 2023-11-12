@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Signup Form</h1>
+    <form action="" method="post">
+
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <div>
+            <label for="Password">Password: </label>
+            <input type="text" id="Password" name="Password" placeholder="Enter your Password" required>
+        </div>
+
+        <div>
+            <label for="Password">Confirm Password: </label>
+            <input type="text" required id="Password" name="Password" placeholder="Re-enter your Password">
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        <br>
+
+        <label for="gender">Select your Gender</label>
+        <div id="gender">
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="others" value="others">
+            <label for="other">Others</label>
+        </div>
+        <br>
+        <div id="interest">
+            <label for="interest">Select your all Interests</label><br>
+            <input type="checkbox" name="interest" id="sports" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" name="interest" id="music" value="music">
+            <label for="music">Music</label>
+            <input type="checkbox" name="interest" id="movies" value="movies">
+            <label for="movies">Movies</label>
+        </div><br>
+        <div>
+            <label for="bio">Your Short Intro</label><br>
+            <textarea name="bio" id="bio" cols="30" rows="10">Enter your Bio here</textarea>
+ </div>
+<label for="age">Your Age</label>
+ <div id="age">
+    <select name="age" id="age">
+
+        <option value="18">Above 18</option>
+        <option value="18">Below 18</option>
+    </select>
+    </div>
+    </form>
+
+
+
+</body>
+
+</html>
