@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        img {
+            float: left;
+            height: 120px;
+            /* float: right; */
+
+        }
+
+        .cards {
+            /* float: right; */
+            border: 2px solid black;
+            display: flow-root;
+
+        }
+
+        .card {
+            /* width: 200px;
+            height: 200px; */
+            background-color: rgb(0, 255, 140);
+            margin: 10px;
+            border: 2px solid red;
+            /* float: left; */
+        }
+        .card:nth-child(2){
+            /* float: right; */
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <img src="card.png" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, aspernatur accusantium! Iure quibusdam
+            numquam ducimus quo esse ratione voluptatem molestiae facilis. Earum, repudiandae et non doloremque vel
+            similique unde hic itaque minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            repellendus aliquam accusamus, veritatis eos quod id! Neque provident accusamus porro voluptas expedita
+            doloremque. Aliquid pariatur itaque dolor non nostrum cumque voluptas sequi delectus quia, repudiandae
+            mollitia excepturi, asperiores sint numquam culpa sapiente esse ex magnam id distinctio necessitatibus!
+            Ipsam, dolorem officia suscipit delectus fuga temporibus incidunt enim minus eligendi ipsum, cum commodi!
+            Pariatur modi obcaecati quos quo recusandae ducimus illum?</p>
+    </div>
+    <div class="card">Card1</div>
+    <div class="card">Card2</div>
+    <div class="card">Card3</div>
+</body>
+
+</html>

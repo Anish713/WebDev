@@ -13,6 +13,8 @@
     width: 400px;
     background-color: rgb(39, 133, 122);
     margin: 2px;
+
+    display: flow-root;
 }
 
 .b{
