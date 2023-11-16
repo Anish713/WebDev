@@ -24,10 +24,11 @@ def get_student(
     return students.get(student_id, {"Data": "Not Found"})
 
 
-@app.get("/get-by-name")
+@app.get("/get-by-name/{student_id}")
 # def get_student(name: Optional[str] = None, test : int): #Error:  SyntaxError: non-default argument follows default argument
 # def get_student( test : int, name: Optional[str] = None): #works, not best
-def get_student(*, name: Optional[str] = None, test: int):  # best way
+# def get_student(*, student_id: int, name: Optional[str] = None, test: int):  # best way
+def get_student(*, student_id: int, name: Optional[str] = None):
     for student_id in students:
         if students[student_id]["name"] == name:
             return students[student_id]
