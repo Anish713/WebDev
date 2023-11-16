@@ -7,7 +7,7 @@ students = {
     1: {"name": "Anish", "age": 21, "roll": 1},
     2: {"name": "Pragya", "age": 21, "roll": 2},
     3: {"name": "Safal", "age": 23, "roll": 3},
-    4: {"name": "Amit", "age": 44, "roll": 4},
+    4: {"name": "Amit", "age": 44, "roll": 4}
 }
 
 
