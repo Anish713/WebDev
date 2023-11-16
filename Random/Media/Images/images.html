@@ -7,10 +7,32 @@
     <title>Images,Tables,List</title>
     <!-- External CSS  -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            
+            border: 2px solid rgb(162, 102, 102);
+            background-color: blueviolet;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            /*object-fit: contain;*/
+            object-fit: cover;
+            object-position: bottom right; /*specifies which portion to show while maintaining aspect ratio*/
+        }
+    </style>
 </head>
 
 <body>
-    <img width="230" height="100" src="train.png" alt="Image of Train">
+
+    <div class="container">
+
+        <img src="train.png" alt="Image of Train">
+    </div>
     <br>
     <br>
     <br>
@@ -57,7 +79,7 @@
 
     <p>
         Ordered List
-    <ol type ="A"> 
+    <ol type="A">
         <!-- type = 1,I,i,a,A -->
         <li>First Item</li>
         <li>Second Item</li>
@@ -132,8 +154,11 @@
         <p style="line-height: 1.5;">This is 1.5 line height</p>
         <p style="line-height: 2;">This is 2 line height</p>
         <h1>Text Overflow</h1>
-        <p style="width: 200px; border: 1px solid black; white-space: nowrap; overflow: hidden; text-overflow: clip;">This is clip text overflowgfjhfjhfjhfjhfjfjhfjhyttdzszs</p>
-        <p style="width: 200px; border: 1px solid black; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">This is ellipsis text overflow</p>
+        <p style="width: 200px; border: 1px solid black; white-space: nowrap; overflow: hidden; text-overflow: clip;">
+            This is clip text overflowgfjhfjhfjhfjhfjfjhfjhyttdzszs</p>
+        <p
+            style="width: 200px; border: 1px solid black; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            This is ellipsis text overflow</p>
         <h1>Vertical Align</h1>
         <p style="vertical-align: baseline;">This is baseline vertical align</p>
         <p style="vertical-align: sub;">This is sub vertical align</p>
@@ -159,7 +184,7 @@
         <p style="text-align: justify; text-justify: inter-ideograph;">This is inter-ideograph text justify</p>
         <p style="text-align: justify; text-justify: inter-cluster;">This is inter-cluster text justify</p>
 
-        
+
 
     </div>
 
