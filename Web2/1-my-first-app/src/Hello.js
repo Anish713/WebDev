@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Hello.css"
 
-
 const Hello = () => {
-    let country = {
+    const initialCountry = {
         name: 'Nepal',
         description: 'Nepal is a beautiful country.'
     }
+    const [country, setCountry] = useState(initialCountry);
+
     const buttonClick = () => {
-        console.log(country);
-        country = {
-            ...country,
-            name: 'USA'
-        }
-        console.log(country)
+        setCountry({
+            name: 'UK',
+            description: 'UK is a beautiful country.'
+        });
     }
+
     return (
         <>
             <div className='background'>
@@ -29,11 +29,11 @@ const Hello = () => {
                         fontSize: "1rem"
                     }
                 }
-onClick={buttonClick}
+                    onClick={buttonClick}
                 > Learn More</button>
             </div>
-            {/* When button clicked, value changes but is not reflected in UI, so needs react hooks. */}
         </>
     )
 }
+
 export default Hello;
