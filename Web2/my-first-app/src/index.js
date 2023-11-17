@@ -9,6 +9,5 @@ root.render(
     <React.StrictMode>
         <Hello />
 
-
     </React.StrictMode>
 )
