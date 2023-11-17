@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
-import './game.css'
+import React, { useState } from 'react';
+import './game.css';
 import Square from './Square';
 
 function Game() {
-    const [squares, setSquare] = useState(Array(9).fill(null));
+    const [squares, setSquares] = useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = useState(true);
+    const [history, setHistory] = useState([squares]);
 
     const onClickSquare = (position) => {
-        if (squares[position]) {
+        if (squares[position] || calculateWinner(squares)) {
             return;
         }
+
         const newSquares = [...squares];
         newSquares[position] = isXTurn ? 'X' : 'O';
-        setSquare(newSquares);
+        setSquares(newSquares);
         setIsXTurn(!isXTurn);
-    }
+        setHistory([...history, newSquares]);
+    };
 
-    const checkWinner = (squares) => {
+    const calculateWinner = (squares) => {
         const lines = [
             [0, 1, 2],
             [3, 4, 5],
@@ -27,16 +30,18 @@ function Game() {
             [0, 4, 8],
             [2, 4, 6],
         ];
+
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
                 return squares[a];
             }
         }
-        return null;
-    }
 
-    const winner = checkWinner(squares);
+        return null;
+    };
+
+    const winner = calculateWinner(squares);
 
     let status;
     if (winner) {
@@ -44,8 +49,24 @@ function Game() {
     } else if (squares.every((square) => square !== null)) {
         status = 'Draw';
     } else {
-        status = 'Next player: ' + (isXTurn ? 'X' : 'O');
+        status = 'Turn: ' + (isXTurn ? 'X' : 'O');
     }
+
+    const resetGame = () => {
+        setSquares(Array(9).fill(null));
+        setIsXTurn(true);
+        setHistory([Array(9).fill(null)]);
+    };
+
+    const undoMove = () => {
+        if (history.length > 1) {
+            const newHistory = [...history];
+            newHistory.pop();
+            setHistory(newHistory);
+            setSquares(newHistory[newHistory.length - 1]);
+            setIsXTurn(!isXTurn);
+        }
+    };
 
     return (
         <div className='game'>
@@ -68,9 +89,11 @@ function Game() {
             </div>
             <div className='game-info'>
                 <div>{status}</div>
+                <button onClick={resetGame}>New Game</button>
+                <button onClick={undoMove}>Undo Move</button>
             </div>
         </div>
-    )
+    );
 }
 
 export default Game;
