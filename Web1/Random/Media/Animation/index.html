@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+        .box {
+            position: absolute;
+            border: 2px solid rgb(0, 255, 238);
+            background-color: rgb(67, 11, 11);
+            width: 121px;
+            height: 121px;
+            bottom: 0;
+            left: 0;
+            border-radius: 70px;
+
+            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+        }
+
+        .container {
+            position: relative;
+            border: 2px solid red;
+            background-color: rgb(255, 255, 255);
+            width: 80vw;
+            height: 80vh;
+
+        }
+
+        @keyframes animateX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animateY {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 75%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Animations</h1>
+
+        <div class="box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
