@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
@@ -35,6 +35,14 @@ function App() {
   })
 
   const { errors, touched, getFieldProps } = formik;
+
+  useEffect(() => {
+    // code here
+    console.log('errors', errors);
+    console.log('touched', touched);
+    console.log("useEffect hook working...");
+  }, [])
+  
 
 
   return (
