@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './App.css';
+// import './App.css';
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 
@@ -37,38 +37,34 @@ function App() {
   const { errors, touched, getFieldProps } = formik;
 
   useEffect(() => {
-    // code here
-    console.log('errors', errors);
-    console.log('touched', touched);
     console.log("useEffect hook working...");
   }, [])
-  
+
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="text-center">
+      <header className="flex flex-col items-center justify-center bg-slate-800 h-screen text-white">
         <h1>Forms in React</h1>
 
         <form noValidate onSubmit={formik.handleSubmit}>
-          {/* //calls onSubmit */}
           <div>
-            <input type='string' name='name' id='name' placeholder='Name' {...getFieldProps("name")} />
+            <input type='string' name='name' id='name' className='p-2.5 m-1 text-black' placeholder='Name' {...getFieldProps("name")} />
           </div>
 
-          <div className='error'>{errors.name}</div>
+          <div className='text-red-500 text-sm'>{errors.name}</div>
 
           <div>
-            <input type='email' name='email' id='email' placeholder='Email' {...getFieldProps("email")} />
+            <input type='email' className='p-2.5 m-1 text-black' name='email' id='email' placeholder='Email' {...getFieldProps("email")} />
           </div>
-          <div className='error'>{errors.email}</div>
+          <div className='text-red-500 text-sm'>{errors.email}</div>
 
           <div>
-            <input type='password' name='password' id='password' placeholder='Password' {...getFieldProps("password")} />
+            <input type='password' className='p-2.5 m-1 text-black' name='password' id='password' placeholder='Password' {...getFieldProps("password")} />
           </div>
-          <div className='error'>{errors.password}</div>
+          <div className='text-red-500 text-sm'>{errors.password}</div>
 
-          <button type='submit'>Login</button>
+          <button className='bg-cyan-300 p-2.5 m-1 w-full' type='submit'>Login</button>
         </form>
       </header>
     </div>
