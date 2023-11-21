@@ -35,7 +35,7 @@ const reactElement = React.createElement(
   'a',
   { href: 'https://google.com', target: '_blank' },
   'click me to visit google',
-  anotherElement ///just for testing parameters
+  anotherUser ///just for testing parameters
 ) //////////(works) Checking if creating and passing element as per react syntax works.
 
 ReactDOM.createRoot(document.getElementById('root')).render(
