@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Card from './components/card'
+import Card1 from './components/card'
 import Card2 from './components/card'
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
 
       {/* <Card passingObject = {username:"Zeref"} passingArray = [1,2,3]} /> ////Error, can't pass directly with this way. */}
       {/* <Card passingObject = {myObj} passingArray = {newArr} /> //////works, can use this way to pass array and objects. */}
-      <Card username="Mars" btnText="click here" />
-      <Card username="Jupiter" btnText='I am button' />
+      <Card1 username="Mars" btnText="click here" />
+      <Card1 username="Jupiter" btnText='I am button' />
     </>
   )
 }
