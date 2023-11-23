@@ -16,6 +16,9 @@ function App() {
   return (
     <>
       <h1 className='bg-green-400 text-black p-4 rounded-xl mb-4'>Tailwind test</h1>
+
+      {/* <Card passingObject = {username:"Zeref"} passingArray = [1,2,3]} /> ////Error, can't pass directly with this way. */}
+      {/* <Card passingObject = {myObj} passingArray = {newArr} /> //////works, can use this way to pass array and objects. */}
       <Card username="Mars" btnText="click here" />
       <Card username="Jupiter" btnText='I am button' />
     </>
