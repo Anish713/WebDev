@@ -19,8 +19,8 @@ function App() {
 
       {/* <Card passingObject = {username:"Zeref"} passingArray = [1,2,3]} /> ////Error, can't pass directly with this way. */}
       {/* <Card passingObject = {myObj} passingArray = {newArr} /> //////works, can use this way to pass array and objects. */}
-      <Card1 username="Mars" btnText="click here" />
-      <Card1 username="Jupiter" btnText='I am button' />
+      <Card2 username="Mars" btnText="click me here" />
+      <Card2 username="Jupiter" btnText='I am button' />
     </>
   )
 }
