@@ -1,6 +1,6 @@
 import React, { useId } from 'react'
 
-function InputBox({
+function InputBox({ //////destructuring , instead of using props.property everytime, directly access property...
     label,
     amount,
     onAmountChange,
@@ -9,11 +9,12 @@ function InputBox({
     selectCurrency = "usd",
     amountDisable = false,
     currencyDisable = false,
-    className = "",
+    className = "", //////if needed to add more css
 }) {
-    const amountInputId = useId()
+    const amountInputId = useId() //////just to demonstrate new hook
 
     return (
+        //////added css classes if passed any.
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
                 <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
